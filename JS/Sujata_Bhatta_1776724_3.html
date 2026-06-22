@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Larger & Smaller Number</title>
+</head>
+<body>
+    <input type="number" id="num1"><br><br>
+    <input type="number" id="num2"><br><br>
+    <button onclick="check()">Check</button>
+    <p id="result"></p>
+
+    <script>
+        function check() {
+            let a = Number(document.getElementById("num1").value);
+            let b = Number(document.getElementById("num2").value);
+
+            if (a > b) {
+                document.getElementById("result").innerHTML = "Larger = " + a;
+            } else {
+                document.getElementById("result").innerHTML = "Smaller = " + b;
+            }
+        }
+    </script>
+</body>
+</html>

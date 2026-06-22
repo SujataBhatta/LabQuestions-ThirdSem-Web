@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+
+    <button id="btn">Load Data</button>
+    
+    <div id="result"></div>
+
+    <script>
+        $(document).ready(function() {
+            
+            $("#btn").click(function() {
+                
+                
+                $.ajax({
+                    url: "data.txt",
+                    success: function(data) {
+                        
+                        $("#result").html(data);
+                    }
+                });
+
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+    <!DOCTYPE html>
+<html>
+<head>
+    <title>Countries Table</title>
+</head>
+<body>
+    <script>
+        let countries = [
+            "Nepal", "India", "China", "Japan", "USA", "UK",
+            "Canada", "Brazil", "Portugal", "France", "Germany", "Italy", "Russia",
+            "Pakistan", "Bangladesh", "Srilanka", "Australia", "Korea", "Thailand",
+            "Malaysia", "Singapore", "Indonesia", "Bhutan", "Maldives", "Qatar",
+            "UAE", "Saudi Arabia", "Egypt", "Turkey", "Spain", "Mexico", "Argentina",
+            "Chile", "Peru", "Colombia", "Denmark", "Norway", "Sweden", "Finland",
+            "Poland", "Belgium", "Austria", "Greece", "Iran", "Iraq", "Afghanistan",
+            "Vietnam", "Laos", "Myanmar", "South Africa"
+        ];
+
+        document.write("<table border='1'>");
+
+        for (let i = 0; i < countries.length; i++) {
+            
+            if (i % 6 === 0) {
+                document.write("<tr>");
+            }
+
+            document.write("<td>" + countries[i] + "</td>");
+
+            
+            if (i % 6 === 5 || i === countries.length - 1) {
+                document.write("</tr>");
+            }
+        }
+
+        document.write("</table>");
+    </script>
+</body>
+</html>

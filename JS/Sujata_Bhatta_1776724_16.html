@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Validation</title>
+    <style>
+        body {
+            font-family: Arial;
+        }
+        input, select {
+            margin: 5px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <form onsubmit="return validate()">
+        Name: <input type="text" id="name"><br>
+        Address: <input type="text" id="address"><br>
+        Username: <input type="text" id="username"><br>
+        Email: <input type="text" id="email"><br>
+        Password: <input type="password" id="password"><br>
+        Website: <input type="text" id="website"><br>
+        Phone: <input type="text" id="phone"><br>
+        Gender: 
+        <input type="radio" name="gender" value="Male"> Male
+        <input type="radio" name="gender" value="Female"> Female
+        <br>
+        Course:
+        <select id="course">
+            <option value="">Select Course</option>
+            <option>BIM</option>
+            <option>BBA</option>
+            <option>BBM</option>
+        </select>
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        function validate() {
+            let name = document.getElementById("name").value;
+            let address = document.getElementById("address").value;
+            let username = document.getElementById("username").value;
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("password").value;
+            let phone = document.getElementById("phone").value;
+            let course = document.getElementById("course").value;
+            
+            let gender = document.getElementsByName("gender");
+            let checked = false;
+            
+            for (let i = 0; i < gender.length; i++) {
+                if (gender[i].checked) {
+                    checked = true;
+                }
+            }
+
+            
+            if (!/^[A-Za-z\s]+$/.test(name)) {
+                alert("Invalid Name");
+                return false;
+            }
+
+            
+            if (!/^\w+$/.test(username)) {
+                alert("Invalid Username");
+                return false;
+            }
+
+            
+            if (address == "") {
+                alert("Enter Address");
+                return false;
+            }
+
+            
+            if (email == "" || !email.includes('@')) {
+                alert("Invalid Email");
+                return false;
+            }
+
+            
+            if (!/^(9819|961)\d{6}$/.test(phone)) {
+                alert("Invalid Phone");
+                return false;
+            }
+
+            
+            if (!/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@#$%.^&*!]).{8,}$/.test(password)) {
+                alert("Invalid Password");
+                return false;
+            }
+
+            
+            if (course == "") {
+                alert("Select Course");
+                return false;
+            }
+
+            
+            if (!checked) {
+                alert("Select Gender");
+                return false;
+            }
+
+            alert("Form Submitted Successfully");
+            return true;
+        }
+    </script>
+</body>
+</html>

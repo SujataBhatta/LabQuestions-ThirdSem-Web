@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Numbers 0 to 100</title>
+</head>
+<body>
+    <div id="container"></div>
+
+    <script>
+        for (let i = 0; i <= 100; i++) {
+            let box = document.createElement("div");
+            box.innerHTML = i;
+
+            
+            if (isPrime(i)) {
+                box.style.background = "red";
+            } 
+            
+            else if (i % 2 === 0) {
+                box.style.background = "green";
+            } 
+            
+            else {
+                box.style.background = "yellow";
+            }
+
+            
+            box.style.display = "inline-block";
+            box.style.padding = "15px";
+            box.style.margin = "3px";
+
+            
+            document.getElementById("container").appendChild(box);
+        }
+
+        
+        function isPrime(num) {
+            if (num < 2) return false;
+            for (let j = 2; j <= Math.sqrt(num); j++) {
+                if (num % j === 0) return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>

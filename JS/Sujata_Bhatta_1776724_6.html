@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Manipulation</title>
+</head>
+<body>
+    <p id="p1">First Paragraph</p>
+    <p id="p2">Second Paragraph</p>
+    <p id="p3">Third Paragraph</p>
+    <p id="p4">Fourth Paragraph</p>
+
+    <script>
+        // Selecting elements
+        let first = document.querySelector("p");
+        let p1 = document.querySelector("#p1");
+        let p2 = document.querySelector("#p2");
+        let p3 = document.querySelector("#p3");
+        let p4 = document.querySelector("#p4");
+
+        let para = document.querySelectorAll("p");
+        
+        // Looping through all paragraph elements and logging their text
+        for (let i = 0; i < para.length; i++) {
+            console.log(para[i].textContent);
+        }
+
+        // Modifying text content
+        p4.textContent = "Fourth Paragraph";
+
+        // Assigning class names
+        p1.className = "one";
+        p2.className = "two";
+        p3.className = "three";
+        p4.className = "four";
+
+        // Applying inline style colors
+        p1.style.color = "green";
+        p2.style.color = "red";
+        p3.style.color = "green";
+        p4.style.color = "red";
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Even Odd, Prime</title>
+</head>
+<body>
+    <script>
+        let n = parseInt(prompt("Enter a number"));
+
+        for (let i = 1; i <= n; i++) {
+            
+            if (isPrime(i)) {
+                document.write("<span style='color: red; margin-right: 5px;'>" + i + "</span>");
+            } 
+            
+            else if (i % 2 === 0) {
+                document.write("<span style='color: green; margin-right: 5px;'>" + i + "</span>");
+            } 
+            
+            else {
+                document.write("<span style='color: yellow; background: black; padding: 2px; margin-right: 5px;'>" + i + "</span>");
+            }
+        }
+
+        
+        function isPrime(num) {
+            if (num < 2) return false;
+            for (let j = 2; j <= Math.sqrt(num); j++) {
+                if (num % j === 0) return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>
