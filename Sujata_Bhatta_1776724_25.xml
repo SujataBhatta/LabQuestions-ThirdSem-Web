@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book [
+    <!ELEMENT book (title, author, price)>
+    <!ELEMENT title (#PCDATA)>
+    <!ELEMENT author (#PCDATA)>
+    <!ELEMENT price (#PCDATA)>
+]>
+<book>
+    <title>Java Programming</title>
+    <author>James Gosling</author>
+    <price>500</price>
+</book>

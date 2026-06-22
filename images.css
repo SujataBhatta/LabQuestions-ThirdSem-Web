@@ -1,0 +1,14 @@
+body {
+    text-align: center;
+    font-family: Arial;
+}
+
+.gallery img {
+    width: 180px;
+    margin: 10px;
+    transition: 0.5s;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+}

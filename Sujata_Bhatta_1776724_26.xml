@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<book xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="book.xsd">
+    <title>Java Programming</title>
+    <author>James Gosling</author>
+    <price>500</price>
+</book>

@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 70%;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+}
+
+.a1 {
+    flex: 0 0 100%;
+    background: #f2b278;
+}
+
+.a2, .a3 {
+    flex: 0 0 50%;
+    background: #8cb2cf;
+}
+
+.a3 {
+    background: #7bd09b;
+}
+
+.a4, .a5, .a6 {
+    flex: 0 0 33.33%;
+    height: 80px;
+}
+
+.a4 {
+    background: #e29b8e;
+}
+
+.a5 {
+    background: #dfca77;
+}
+
+.a6 {
+    background: #a9a3de;
+}

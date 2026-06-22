@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.header {
+    height: 70px;
+    background: #6660a8;
+    text-align: center;
+}
+
+.nav {
+    height: 35px;
+    background: #bcc7b7;
+    text-align: center;
+}
+
+.left, .content, .right {
+    float: left;
+    height: 250px;
+    padding: 10px;
+}
+
+.left {
+    width: 50%;
+    background: #b45a5a;
+}
+
+.content {
+    width: 50%;
+    background: #19a8e8;
+}
+
+.right {
+    width: 25%;
+    background: #877469;
+}
+
+.footer {
+    clear: both;
+    height: 45px;
+    background: #9e9e9e;
+    color: #fff;
+    text-align: center;
+    line-height: 45px;
+}

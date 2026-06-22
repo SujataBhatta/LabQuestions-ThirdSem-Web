@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <div class="container">
+        <h1>REGISTRATION / LOGIN Form</h1>
+        <div class="form-container">
+            <div class="form-box">
+                <h2>Register Form :</h2>
+                <form>
+                    <input type="text" placeholder="Username" required>
+                    <input type="email" placeholder="Email" required>
+                    <small>Please enter valid email address</small>
+                    <input type="password" placeholder="Password" required>
+                    <small>Minimum of 6 characters</small>
+                    <input type="password" placeholder="Confirm" required>
+                    <div class="gender">
+                        <label>
+                            <input type="radio" name="gender"> Female
+                        </label>
+                    </div>
+                    <button type="submit">SUBMIT</button>
+                </form>
+            </div>
+
+            <div class="form-box">
+                <h2>Login Form :</h2>
+                <form>
+                    <input type="email" placeholder="Enter Your Email" required>
+                    <input type="password" placeholder="Password" required>
+                    <div class="remember">
+                        <label>
+                            <input type="checkbox">
+                            Remember me
+                        </label>
+                    </div>
+                    <button type="submit">LOGIN</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

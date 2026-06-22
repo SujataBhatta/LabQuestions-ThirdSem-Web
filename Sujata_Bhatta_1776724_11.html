@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dropdown Menu</title>
+    <style>
+        body {
+            font-family: Arial, Sans-Serif;
+            background: linear-gradient(to right, purple, Steelblue);
+        }
+        .navbar {
+            width: 80%;
+            margin: 50px auto;
+        }
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            background: white;
+            border-radius: 5px;
+        }
+
+        ul::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        li {
+            float: left;
+            position: relative;
+        }
+        li a {
+            display: block;
+            padding: 15px 25px;
+            text-decoration: none;
+            color: black;
+        }
+        li a:hover {
+            background: #f0f0f0;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            top: 100%; 
+            left: 0;
+        }
+        .dropdown-content a {
+            display: block;
+            padding: 12px;
+            text-align: left;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li class="dropdown">
+                <a href="#">Services</a>
+                <div class="dropdown-content">
+                    <a href="#">Design</a>
+                    <a href="#">Development</a>
+                    <a href="#">Accessibility</a>
+                    <a href="#">Content Strategy</a>
+                    <a href="#">Training</a>
+                </div>
+            </li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+    </div>
+
+</body>
+</html>
